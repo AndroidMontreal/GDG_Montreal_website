@@ -1,0 +1,25 @@
+{
+  "logo": {
+    "src": "/images/logo/gdg_montreal.png",
+    "alt": {
+      "en": "Montreal Google Developer Group",
+      "fr": "Groupe de Développeurs Google Montréal"
+    },
+    "width": 250,
+    "height": 100,
+    "href": "/"
+  },
+  "cta": {
+    "href": "https://discord.gg/QpVZjYFQhF",
+    "label": {
+      "en": "Join Community",
+      "fr": "Rejoindre la Communauté"
+    }
+  },
+  "mobileMenu": {
+    "ariaLabel": {
+      "en": "menu",
+      "fr": "menu"
+    }
+  }
+}
