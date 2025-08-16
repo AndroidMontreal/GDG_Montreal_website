@@ -52,8 +52,8 @@ export const team = [{
 }, {
   name: 'Stacy Véronneau',
   title: {
-    en: 'Director of Sales Engineering and Cloud Solutions at SE Cloud Experts | GDG Cloud Montreal Organizer',
-    fr: 'Directrice d\'ingénierie des ventes et solutions Cloud chez SE Cloud Experts | Organisatrice GDG Cloud Montréal'
+    en: 'Architect, Badal | GDG Cloud Montreal Organizer',
+    fr: 'Architecte, Badal | Organisatrice GDG Cloud Montréal'
   },
   image: '/images/team/stacy.veronneau.png',
   link: 'https://g.dev/sveronneau',
