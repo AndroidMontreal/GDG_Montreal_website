@@ -18,6 +18,10 @@ export const navigationData = {
         label: "Community"
       },
       {
+        href: "/events",
+        label: "Events"
+      },
+      {
         href: "/team",
         label: "Organizers"
       }
@@ -54,6 +58,10 @@ export const navigationData = {
       {
         href: "#photos",
         label: "Communauté"
+      },
+      {
+        href: "/events",
+        label: "Événements"
       },
       {
         href: "/team",

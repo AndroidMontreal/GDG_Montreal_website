@@ -1,5 +1,6 @@
 import MeetupHeader from '@/components/sections/MeetupHeader';
 import Communities from '@/components/sections/Communities';
+import UpcomingEvents from '@/components/sections/UpcomingEvents';
 import SpecialEvents from '@/components/sections/SpecialEvents';
 import EventPhotos from '@/components/sections/EventPhotos';
 
@@ -11,6 +12,9 @@ export default function Home() {
       </section>
       <section id="communities" className="scroll-mt-20">
         <Communities />
+      </section>
+      <section id="upcoming-events" className="scroll-mt-20">
+        <UpcomingEvents />
       </section>
       <section id="events" className="scroll-mt-20">
         <SpecialEvents />
