@@ -10,16 +10,16 @@ export const navigationData = {
         label: "Meetup Groups"
       },
       {
+        href: "/events",
+        label: "Events"
+      },
+      {
         href: "#events",
         label: "Special Events"
       },
       {
         href: "#photos",
         label: "Community"
-      },
-      {
-        href: "/events",
-        label: "Events"
       },
       {
         href: "/team",
@@ -52,16 +52,16 @@ export const navigationData = {
         label: "Groupes de Rencontre"
       },
       {
+        href: "/events",
+        label: "Événements"
+      },
+      {
         href: "#events",
         label: "Événements Spéciaux"
       },
       {
         href: "#photos",
         label: "Communauté"
-      },
-      {
-        href: "/events",
-        label: "Événements"
       },
       {
         href: "/team",
