@@ -39,11 +39,13 @@ const MeetupHeader = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3">
-            <PillButton
-              className="flex"
-              href={data.cta.primary.href}
-              label={data.cta.primary.text}
-            />
+          { //<PillButton
+            //  className="flex"
+            //  href={data.cta.primary.href}
+            //  label={data.cta.primary.text}
+            // />
+          }
+
             <PillButton
               className="flex"
               href={data.cta.secondary.href}
