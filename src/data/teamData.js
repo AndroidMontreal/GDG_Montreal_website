@@ -109,8 +109,8 @@ export const team = [{
 {
   name: 'CÉSAR BUSTAMANTE',
   title: {
-    en: 'PWC Canada , CLOUD ADVISOR | GDG Cloud Montreal Organizer',
-    fr: 'PWC Canada, conseiller en infonuagique | Organisateur GDG Cloud Montréal'
+    en: 'PWC Canada, Senior Manager, Infrastructure | GDG Cloud Montreal Organizer',
+    fr: 'PWC Canada, Manager sénior, Infrastructure | Organisateur GDG Cloud Montréal'
   },
   image: '/images/team/cesar.jpg',
   link: 'https://www.linkedin.com/in/c%C3%A9sarbustamante/',
