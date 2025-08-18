@@ -52,8 +52,8 @@ export const team = [{
 }, {
   name: 'Stacy Véronneau',
   title: {
-    en: 'Architect, Badal | GDG Cloud Montreal Organizer',
-    fr: 'Architecte, Badal | Organisatrice GDG Cloud Montréal'
+    en: 'Senior Customer Engineer at Badal (By Telus Business) | GDG Cloud Montreal Organizer',
+    fr: 'Ingénieur client senior chez Badal (Par Telus Business) | Organisatrice GDG Cloud Montréal'
   },
   image: '/images/team/stacy.veronneau.png',
   link: 'https://g.dev/sveronneau',
@@ -105,4 +105,14 @@ export const team = [{
   },
   image: '/images/team/sam.jpg',
   link: 'https://www.linkedin.com/in/samueldionne',
-}];
+},
+{
+  name: 'CÉSAR BUSTAMANTE',
+  title: {
+    en: 'PWC Canada , CLOUD ADVISOR | GDG Cloud Montreal Organizer',
+    fr: 'PWC Canada, conseiller en infonuagique | Organisateur GDG Cloud Montréal'
+  },
+  image: '/images/team/cesar.jpg',
+  link: 'https://www.linkedin.com/in/c%C3%A9sarbustamante/',
+}
+];
