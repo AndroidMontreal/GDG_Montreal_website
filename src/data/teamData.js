@@ -17,6 +17,7 @@ export const team = [{
   },
   image: '/images/team/ali.jpg',
   link: 'https://www.linkedin.com/in/aliyazdi75/',
+  teams: ['GDG Montreal', 'Flutter Montreal'],
 }, {
   name: 'Billy Taing',
   title: {
@@ -25,6 +26,7 @@ export const team = [{
   },
   image: '/images/team/billy.jpg',
   link: 'https://www.linkedin.com/in/taingbilly/',
+  teams: ['GDG Montreal', 'Flutter Montreal'],
 }, {
   name: 'Jhin Lee',
   title: {
@@ -33,6 +35,7 @@ export const team = [{
   },
   image: '/images/team/jhin.jpg',
   link: 'https://g.dev/leehack',
+  teams: ['GDG Montreal', 'Flutter Montreal'],
 }, {
   name: 'Laurence de Villers',
   title: {
@@ -41,6 +44,7 @@ export const team = [{
   },
   image: '/images/team/laurence.jpg',
   link: 'https://www.linkedin.com/in/ldevillers/',
+  teams: ['GDG Montreal','Android Montreal', 'Women Techmakers'],
 }, {
   name: 'Mimoh Solanki',
   title: {
@@ -49,6 +53,7 @@ export const team = [{
   },
   image: '/images/team/mimoh.jpg',
   link: 'https://www.linkedin.com/in/mimohsolanki/',
+  teams: ['GDG Montreal', 'Women Techmakers'],
 }, {
   name: 'Stacy Véronneau',
   title: {
@@ -57,6 +62,7 @@ export const team = [{
   },
   image: '/images/team/stacy.veronneau.png',
   link: 'https://g.dev/sveronneau',
+  teams: ['GDG Cloud Montreal'],
 },  {
   name: 'Jihoo Park',
   title: {
@@ -65,6 +71,7 @@ export const team = [{
   },
   image: '/images/team/jihoo_green.jpeg',
   link: 'https://developers.google.com/profile/u/109280340170455499902',
+  teams: ['GDG Montreal', 'Flutter Montreal', 'Women Techmakers'],
 }, {
   name: 'Lenz Paul',
   title: {
@@ -73,6 +80,7 @@ export const team = [{
   },
   image: '/images/team/lenz.jpg',
   link: 'https://devfest2023.gdgmontreal.com/speaker/lenz-paul/',
+  teams: ['GDG Montreal', 'Flutter Montreal'],
 }, {
   name: 'Nav Singh',
   title: {
@@ -81,6 +89,7 @@ export const team = [{
   },
   image: '/images/team/nav.png',
   link: 'https://www.linkedin.com/in/navczydev/',
+  teams: ['GDG Montreal', 'Android Montreal'],
 }, {
   name: 'Florian Ley',
   title: {
@@ -89,6 +98,7 @@ export const team = [{
   },
   image: '/images/team/florian.png',
   link: 'https://www.linkedin.com/in/florian-ley/',
+  teams: ['GDG Cloud Montreal'],
 }, {
   name: 'Stefania Pecore',
   title: {
@@ -97,6 +107,7 @@ export const team = [{
   },
   image: '/images/team/stefania.jpg',
   link: 'https://developers.google.com/profile/u/specore',
+  teams: ['GDG Montreal', 'Women Techmakers'],
 },  {
   name: 'Samuel Dionne',
   title: {
@@ -105,6 +116,7 @@ export const team = [{
   },
   image: '/images/team/sam.jpg',
   link: 'https://www.linkedin.com/in/samueldionne',
+  teams: ['GDG Montreal','Android Montreal'],
 },
 {
   name: 'CÉSAR BUSTAMANTE',
@@ -114,5 +126,6 @@ export const team = [{
   },
   image: '/images/team/cesar.jpg',
   link: 'https://www.linkedin.com/in/c%C3%A9sarbustamante/',
+  teams: ['GDG Cloud Montreal'],
 }
 ];
