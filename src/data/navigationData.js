@@ -6,20 +6,12 @@ export const navigationData = {
         label: "Home"
       },
       {
-        href: "#communities",
-        label: "Meetup Groups"
-      },
-      {
         href: "/events",
         label: "Events"
       },
       {
         href: "#events",
         label: "Special Events"
-      },
-      {
-        href: "#photos",
-        label: "Community"
       },
       {
         href: "/team",
@@ -48,20 +40,12 @@ export const navigationData = {
         label: "Accueil"
       },
       {
-        href: "#communities",
-        label: "Groupes de Rencontre"
-      },
-      {
         href: "/events",
         label: "Événements"
       },
       {
         href: "#events",
         label: "Événements Spéciaux"
-      },
-      {
-        href: "#photos",
-        label: "Communauté"
       },
       {
         href: "/team",

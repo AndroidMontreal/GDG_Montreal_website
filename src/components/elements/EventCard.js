@@ -59,6 +59,14 @@ const EventCard = ({ event, isPast = false }) => {
           )}
         </div>
         
+        {event.chapterName && (
+          <div className="mt-3">
+            <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">
+              {event.chapterName}
+            </span>
+          </div>
+        )}
+        
         <div className="mt-4 flex items-center justify-between">
           <span className="text-sm text-blue-600 group-hover:text-blue-800 font-medium">
             {language === 'fr' ? 'Voir les détails →' : 'View Details →'}

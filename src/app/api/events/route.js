@@ -4,10 +4,28 @@ const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
 let cachedData = null;
 let lastFetchTime = 0;
 
-// GDG Chapter endpoints
+// GDG Chapter endpoints with chapter information
 const CHAPTER_ENDPOINTS = [
-  'https://gdg.community.dev/api/chapter/954/event/', // GDG Montreal
-  'https://gdg.community.dev/api/chapter/281/event/'  // GDG Cloud Montreal
+  { 
+    url: 'https://gdg.community.dev/api/chapter/954/event/', 
+    chapterName: 'GDG Montreal',
+    chapterId: 954 
+  },
+  { 
+    url: 'https://gdg.community.dev/api/chapter/281/event/', 
+    chapterName: 'GDG Cloud Montreal',
+    chapterId: 281 
+  },
+  { 
+    url: 'https://gdg.community.dev/api/event_slim/for_chapter/954/?status=Live&include_cohosted_events=true',
+    chapterName: 'GDG Montreal',
+    chapterId: 954 
+  },
+  { 
+    url: 'https://gdg.community.dev/api/event_slim/for_chapter/281/?status=Live&include_cohosted_events=true',
+    chapterName: 'GDG Cloud Montreal',
+    chapterId: 281 
+  },
 ];
 
 export async function GET() {
@@ -22,7 +40,7 @@ export async function GET() {
     // Fetch data from all chapter endpoints
     const fetchPromises = CHAPTER_ENDPOINTS.map(async (endpoint) => {
       try {
-        const response = await fetch(endpoint, {
+        const response = await fetch(endpoint.url, {
           headers: {
             'Accept': 'application/json',
             'User-Agent': 'GDG-Montreal-Website/1.0'
@@ -31,14 +49,15 @@ export async function GET() {
         });
 
         if (!response.ok) {
-          console.warn(`Failed to fetch from ${endpoint}: ${response.status} ${response.statusText}`);
-          return { results: [] };
+          console.warn(`Failed to fetch from ${endpoint.url}: ${response.status} ${response.statusText}`);
+          return { results: [], chapterInfo: endpoint };
         }
 
-        return await response.json();
+        const data = await response.json();
+        return { ...data, chapterInfo: endpoint };
       } catch (error) {
-        console.warn(`Error fetching from ${endpoint}:`, error);
-        return { results: [] };
+        console.warn(`Error fetching from ${endpoint.url}:`, error);
+        return { results: [], chapterInfo: endpoint };
       }
     });
 
@@ -48,7 +67,13 @@ export async function GET() {
     // Combine all events from different chapters
     const allEvents = responses.reduce((acc, response) => {
       if (response.results && Array.isArray(response.results)) {
-        return [...acc, ...response.results];
+        // Add chapter information to each event
+        const eventsWithChapter = response.results.map(event => ({
+          ...event,
+          chapterName: response.chapterInfo.chapterName,
+          chapterId: response.chapterInfo.chapterId
+        }));
+        return [...acc, ...eventsWithChapter];
       }
       return acc;
     }, []);
