@@ -46,8 +46,8 @@ export const specialEvents = [
       ]
     },
     ctaText: {
-      en: "Stay Updated",
-      fr: "Rester Informé"
+      en: "Information",
+      fr: "Information"
     },
     ctaLink: "https://devfest.gdgmontreal.com",
     featured: true
