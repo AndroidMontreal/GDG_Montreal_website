@@ -2,6 +2,20 @@ export const navigationData = {
   en: {
     header: [
       {
+        href: "/events",
+        label: "Events"
+      },
+      {
+        href: "#events",
+        label: "Special Events"
+      },
+      {
+        href: "/team",
+        label: "Organizers"
+      }
+    ],
+    drawer: [
+      {
         href: "/",
         label: "Home"
       },
@@ -35,6 +49,20 @@ export const navigationData = {
   },
   fr: {
     header: [
+      {
+        href: "/events",
+        label: "Événements"
+      },
+      {
+        href: "#events",
+        label: "Événements Spéciaux"
+      },
+      {
+        href: "/team",
+        label: "Organisateur·trice·s"
+      }
+    ],
+    drawer: [
       {
         href: "/",
         label: "Accueil"

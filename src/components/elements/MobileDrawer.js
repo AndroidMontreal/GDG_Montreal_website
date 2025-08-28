@@ -6,8 +6,7 @@ const MobileDrawer = ({ isOpen, onClose }) => {
 
 
     <div
-      className={`lg:hidden
-            w-full 
+      className={`w-full 
             fixed 
             bottom-0
             left-0

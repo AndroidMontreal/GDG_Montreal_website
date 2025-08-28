@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { getHeaderNavData } from '@/data/headerNavData';
+import { getHeaderNavData, getDrawerNavData } from '@/data/headerNavData';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -8,17 +8,17 @@ const Navbar = ({ isMobile }) => {
   const router = useRouter();
   const pathname = usePathname();
   const { language } = useLanguage();
-  const headerNavData = getHeaderNavData(language);
+  const navData = isMobile ? getDrawerNavData(language) : getHeaderNavData(language);
 
 
   return (
     <nav className={isMobile ? 'flex flex-col space-y-2 ' : 'hidden md:flex space-x-2 items-center'}>
-      {headerNavData.map((link) => (
+      {navData.map((link) => (
         <Link
           key={uuidv4()}
           href={link.href}
           className={`
-            text-gray-800 
+            text-gray-800
             px-4
             py-2
             text-md

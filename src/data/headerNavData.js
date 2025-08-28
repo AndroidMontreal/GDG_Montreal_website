@@ -4,6 +4,10 @@ export const getHeaderNavData = (language = 'en') => {
   return navigationData[language].header;
 };
 
+export const getDrawerNavData = (language = 'en') => {
+  return navigationData[language].drawer;
+};
+
 export const getFooterNavData = (language = 'en') => {
   return navigationData[language].footer;
 };

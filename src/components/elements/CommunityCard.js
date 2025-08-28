@@ -97,13 +97,13 @@ const CommunityCard = ({ communities }) => {
             <div className="flex gap-2 mt-auto">
               <a
                 href={meetup.website}
-                className="flex-1 text-center bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+                className="flex-1 text-center bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors flex items-center justify-center"
               >
                 {buttonText.learnMore}
               </a>
               <a
                 href={meetup.meetupUrl}
-                className="flex-1 text-center border border-blue-600 text-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors"
+                className="flex-1 text-center border border-blue-600 text-blue-600 px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors flex items-center justify-center"
               >
                 {buttonText.joinMeetup}
               </a>
