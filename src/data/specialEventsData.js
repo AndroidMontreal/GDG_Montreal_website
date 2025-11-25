@@ -29,7 +29,7 @@ export const specialEvents = [
       en: "AX.C",
       fr: "AX.C"
     },
-    status: "coming-soon",
+    status: "past",
     image: "/images/logo/devfest-event-banner.jpg",
     highlights: {
       en: [

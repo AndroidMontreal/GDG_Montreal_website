@@ -31,7 +31,11 @@ export default function UpcomingEvents() {
     const fetchEvents = async () => {
       try {
         setLoading(true);
-        const response = await fetch('/api/events');
+        // Add timestamp to bust cache and get fresh data every time
+        const timestamp = Date.now();
+        const response = await fetch(`/api/events?t=${timestamp}`, {
+          cache: 'no-store'
+        });
         if (!response.ok) {
           throw new Error('Failed to fetch events');
         }
@@ -45,6 +49,12 @@ export default function UpcomingEvents() {
     };
 
     fetchEvents();
+
+    // Refetch when window gains focus (user returns to tab)
+    const handleFocus = () => fetchEvents();
+    window.addEventListener('focus', handleFocus);
+
+    return () => window.removeEventListener('focus', handleFocus);
   }, []);
 
   const now = new Date();

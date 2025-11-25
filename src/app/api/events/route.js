@@ -1,9 +1,5 @@
 import { NextResponse } from 'next/server';
 
-const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
-let cachedData = null;
-let lastFetchTime = 0;
-
 // GDG Chapter endpoints with chapter information
 const CHAPTER_ENDPOINTS = [
   { 
@@ -30,22 +26,14 @@ const CHAPTER_ENDPOINTS = [
 
 export async function GET() {
   try {
-    const now = Date.now();
-
-    // Check if we have cached data that's still fresh (less than 24 hours old)
-    if (cachedData && (now - lastFetchTime) < CACHE_DURATION) {
-      return NextResponse.json(cachedData);
-    }
-
-    // Fetch data from all chapter endpoints
+    // Fetch fresh data from all chapter endpoints on every request
     const fetchPromises = CHAPTER_ENDPOINTS.map(async (endpoint) => {
       try {
         const response = await fetch(endpoint.url, {
           headers: {
             'Accept': 'application/json',
             'User-Agent': 'GDG-Montreal-Website/1.0'
-          },
-          next: { revalidate: 86400 } // Revalidate every 24 hours
+          }
         });
 
         if (!response.ok) {
@@ -101,20 +89,18 @@ export async function GET() {
       }
     };
 
-    // Update cache
-    cachedData = combinedData;
-    lastFetchTime = now;
-
-    return NextResponse.json(combinedData);
+    // Return with cache control headers to prevent browser caching
+    return NextResponse.json(combinedData, {
+      headers: {
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      }
+    });
   } catch (error) {
     console.error('Error fetching events:', error);
 
-    // If we have cached data, return it even if it's old
-    if (cachedData) {
-      return NextResponse.json(cachedData);
-    }
-
-    // Otherwise return an error response
+    // Return an error response
     return NextResponse.json(
       { error: 'Failed to fetch events', results: [] },
       { status: 500 }
