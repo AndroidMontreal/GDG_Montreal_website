@@ -89,7 +89,7 @@ const SpecialEvents = () => {
               </div>
               
               <PillButton
-                href={featuredEvent.ctaLink}
+                href={getLocalizedData(featuredEvent.ctaLink)}
                 label={getLocalizedData(featuredEvent.ctaText)}
                 className="inline-flex"
               />
@@ -143,7 +143,7 @@ const SpecialEvents = () => {
               </div>
               
               <PillButton
-                href={event.ctaLink}
+                href={getLocalizedData(event.ctaLink)}
                 label={getLocalizedData(event.ctaText)}
                 className="w-full text-center text-sm"
               />

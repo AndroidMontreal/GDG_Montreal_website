@@ -11,45 +11,48 @@ export const specialEventsSection = {
 
 export const specialEvents = [
   {
-    id: "devfest-2025",
-    name: "DevFest Montreal 2025",
+    id: "devfest-2026",
+    name: "DevFest Montreal 2026",
     tagline: {
-      en: "DevFests are local tech conferences hosted by Google Developer Groups (GDG) around the world",
-      fr: "Les DevFests sont des conférences technologiques locales organisées par les Google Developer Groups (GDG) partout dans le monde."
+      en: "Quebec's largest community-driven tech conference",
+      fr: "La plus grande conférence tech communautaire au Québec"
     },
     description: {
-      en: "DevFest Montreal is our flagship annual conference bringing together 400+ developers, designers, and tech enthusiasts. Join us for a full day of inspiring talks, hands-on workshops, and networking opportunities featuring Google technologies and beyond.",
-      fr: "DevFest Montreal est notre conférence annuelle phare rassemblant plus de 400 développeurs, designers et passionnés de technologie. Rejoignez-nous pour une journée complète de conférences inspirantes, d'ateliers pratiques et d'opportunités de réseautage autour des technologies Google et plus encore."
+      en: "Our 8th and most ambitious edition yet, with an 80s theme! A tech conference built by the community, for the community: no sales pitches on stage, just concrete technical projects, hands-on workshops, and the people who actually built them. Connect with 300+ developers, AI builders, students, professionals and founders.",
+      fr: "Notre 8e édition et la plus ambitieuse à ce jour, sous le thème des années 80 ! Une conférence technologique bâtie par la communauté, pour la communauté : pas de présentations de vente sur scène, mais des projets techniques concrets, des ateliers pratiques et les personnes qui les ont réellement bâtis. Connectez-vous avec plus de 300 développeurs, bâtisseurs IA, étudiants, professionnels et fondateurs."
     },
     date: {
-      en: "November 1st 2025",
-      fr: "1er Novembre 2025"
+      en: "November 6, 2026",
+      fr: "6 novembre 2026"
     },
     location: {
-      en: "AX.C",
-      fr: "AX.C"
+      en: "Ax.c Hub, 800 Square-Victoria, Montréal",
+      fr: "Espace Ax.c, 800 Square-Victoria, Montréal"
     },
-    status: "past",
-    image: "/images/logo/devfest-event-banner.jpg",
+    status: "registration-open",
+    image: "/images/logo/devfest-2026-banner.jpg",
     highlights: {
       en: [
-        "15+ Expert Speakers",
-        "Hands-on Workshops",
-        "Networking & Food",
-        "Swag & Prizes"
+        "30+ Speakers (incl. Googlers & GDEs)",
+        "20+ Talks",
+        "4 Hands-on Workshops",
+        "300+ Attendees"
       ],
       fr: [
-        "15+ Conférenciers Experts",
-        "Ateliers Pratiques",
-        "Réseautage et Nourriture",
-        "Cadeaux et Prix"
+        "30+ Intervenants (incluant Googlers et GDEs)",
+        "20+ Conférences",
+        "4 Ateliers Pratiques",
+        "300+ Participants"
       ]
     },
     ctaText: {
-      en: "Information",
-      fr: "Information"
+      en: "Get Tickets",
+      fr: "Billets"
     },
-    ctaLink: "https://devfest.gdgmontreal.com",
+    ctaLink: {
+      en: "https://devfest.gdgmontreal.com/en/",
+      fr: "https://devfest.gdgmontreal.com/fr/"
+    },
     featured: true
   },
   // {
