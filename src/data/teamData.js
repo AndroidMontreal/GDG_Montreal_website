@@ -119,7 +119,7 @@ export const team = [{
   teams: ['GDG Montreal','Android Montreal'],
 },
 {
-  name: 'CÉSAR BUSTAMANTE',
+  name: 'César Bustamante',
   title: {
     en: 'PWC Canada, Senior Manager, Infrastructure | GDG Cloud Montreal Organizer',
     fr: 'PWC Canada, Manager sénior, Infrastructure | Organisateur GDG Cloud Montréal'
