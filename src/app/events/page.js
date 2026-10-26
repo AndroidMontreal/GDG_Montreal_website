@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import TitleWithSubtitle from '@/components/elements/TitleWithSubtitle';
 import EventCard from '@/components/elements/EventCard';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { fetchEvents } from '@/lib/events';
 
 const eventsSection = {
   en: {
@@ -29,19 +30,10 @@ export default function Events() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchEvents = async () => {
+    const loadEvents = async () => {
       try {
         setLoading(true);
-        // Add timestamp to bust cache and get fresh data every time
-        const timestamp = Date.now();
-        const response = await fetch(`/api/events?t=${timestamp}`, {
-          cache: 'no-store'
-        });
-        if (!response.ok) {
-          throw new Error('Failed to fetch events');
-        }
-        const data = await response.json();
-        setEvents(data.results || []);
+        setEvents(await fetchEvents());
       } catch (err) {
         setError(err.message);
       } finally {
@@ -49,10 +41,10 @@ export default function Events() {
       }
     };
 
-    fetchEvents();
+    loadEvents();
 
     // Refetch when window gains focus (user returns to tab)
-    const handleFocus = () => fetchEvents();
+    const handleFocus = () => loadEvents();
     window.addEventListener('focus', handleFocus);
 
     return () => window.removeEventListener('focus', handleFocus);
